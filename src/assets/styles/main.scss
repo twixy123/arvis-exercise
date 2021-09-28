@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#app{
+  height: 100vh;
+  width: 100vw;
+}
+
+.main{
+  height: 100vh;
+  background-color: $main-bg;
+
+  & > .el-col{
+    height: 100vh;
+  }
+}
+
+.nav-sidebar{
+  background-color: $nav;
+  height: 100%;
+}
+
+.nav-search{
+  &__autocomplete-body{
+    width: 100%;
+
+    & input{
+      border-radius: 0;
+      border: none;
+    }
+  }
+}
+
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    // border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px $scrollbar-track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb;
+    // border-radius: 5px;
+  }
+}
+
+.users-menu{
+  height: calc(100% - 80px);
+
+  & li{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid $nav-item_hover;
+    padding: 10px;
+    box-sizing: border-box;
+
+    &:hover{
+      background-color: $nav-item_hover;
+    }
+  }
+}
+
+.add-user-wrapper{
+  width: 100%;
+  height: 40px;
+
+  & &__btn{
+    width: 100%;
+    text-align: center;
+    background-color: $bg-btn_primary;
+    color: $color-btn_primary;
+    border-radius: 0;
+
+    &:hover{
+      background-color: $bg-btn_primary;
+      color: $color-btn_primary;
+    }
+  }
+}
