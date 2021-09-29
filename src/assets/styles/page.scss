@@ -1,0 +1,98 @@
+.router-page-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 10px;
+  position: relative;
+
+
+  &__delete{
+    color: $delete;
+  }
+
+  &__action{
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  &__name {
+    width: calc(100% - 30px);
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+    box-sizing: border-box;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__body{
+    resize: none;
+    height: 100%;
+    background: none;
+    font-size: 14px;
+    line-height: 1.4;
+    border: none;
+    padding: 0 20px 10px;
+    box-sizing: border-box;
+    font-family: $roboto;
+    outline: none;
+  }
+}
+
+.user-page-body {
+  &__menu {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  &__item {
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    &__content {
+      font-size: 14px;
+    }
+
+    &:hover {
+      & h5 {
+        color: $color-post-item;
+      }
+    }
+  }
+}
+.add-post-wrapper__btn{
+  width: 100%;
+  background: $bg-btn-add-post !important;
+  color: $color-btn_primary !important;
+  border-radius: 0 !important;
+}
+
+.add-post-wrapper__dialog__textarea{
+  & textarea{
+    resize: none !important;
+    font-family: $roboto;
+  }
+}

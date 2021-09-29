@@ -20,14 +20,20 @@ export default {
       users: [],
     };
   },
-  created() {
-    this.fetchUsers({
-      url: this.$api.GET_USERS,
+  async created() {
+    const userRes = await this.fetchUsers({
+      url: this.$api.USERS,
       method: "GET",
     });
+    if (userRes) {
+      this.fetchPosts({
+        url: this.$api.POSTS,
+        method: "GET",
+      });
+    }
   },
   methods: {
-    ...mapActions(["fetchUsers"]),
+    ...mapActions(["fetchUsers", "fetchPosts"]),
   },
   computed: {
     ...mapGetters(["getUsers"]),

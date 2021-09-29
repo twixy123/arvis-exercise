@@ -9,7 +9,7 @@ import "./assets/styles/main.scss";
 // импорт ui библиотеки
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-import locale from "element-ui/lib/locale/lang/en";
+import locale from "element-ui/lib/locale/lang/ru-RU";
 
 //подключение ui библиотеки
 Vue.use(ElementUI, { locale });

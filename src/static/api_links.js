@@ -1,6 +1,4 @@
 export default {
-  GET_USERS: "https://jsonplaceholder.typicode.com/users",
-  ADD_USER: "",
-  DELETE_USER: "",
-  UPDATE_USER: "",
+  USERS: "https://jsonplaceholder.typicode.com/users",
+  POSTS: "https://jsonplaceholder.typicode.com/posts",
 };

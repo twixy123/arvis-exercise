@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>Hello from Hoem.vue</h1>
+    <h1 class="main__title">Выберите нужного пользователя</h1>
   </div>
 </template>

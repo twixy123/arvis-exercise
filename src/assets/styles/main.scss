@@ -1,42 +1,39 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
   margin: 0;
   padding: 0;
 }
-#app{
+#app {
   height: 100vh;
   width: 100vw;
+  font-family: $roboto;
 }
 
-.main{
+.main {
   height: 100vh;
   background-color: $main-bg;
 
-  & > .el-col{
+  & > .el-col {
     height: 100vh;
   }
-}
 
-.nav-sidebar{
-  background-color: $nav;
-  height: 100%;
-}
-
-.nav-search{
-  &__autocomplete-body{
+  &__title {
+    font-size: 28px;
     width: 100%;
-
-    & input{
-      border-radius: 0;
-      border: none;
-    }
+    text-align: center;
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.menu{
+.menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   overflow: auto;
+  list-style: none;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -53,39 +50,35 @@
   }
 }
 
-.users-menu{
-  height: calc(100% - 80px);
-
-  & li{
-    height: 40px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-bottom: 1px solid $nav-item_hover;
-    padding: 10px;
-    box-sizing: border-box;
-
-    &:hover{
-      background-color: $nav-item_hover;
-    }
-  }
-}
-
-.add-user-wrapper{
+.ellipsis{
+  display: block;
   width: 100%;
-  height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-  & &__btn{
+.search {
+  &__autocomplete-body {
     width: 100%;
-    text-align: center;
-    background-color: $bg-btn_primary;
-    color: $color-btn_primary;
-    border-radius: 0;
+  }
 
-    &:hover{
-      background-color: $bg-btn_primary;
-      color: $color-btn_primary;
+  &__autocomplete-template {
+    & li {
+      padding: 0 !important;
+      line-height: 1.2 !important;
     }
   }
+
+  &__autocomplete-item {
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    text-decoration: none;
+    color: $color-autocomplete-item;
+  }
 }
+
+@import url('./sidebar.scss');
+@import url('./page.scss');
